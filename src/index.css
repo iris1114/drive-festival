@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+:root {
+  --font: "Roboto Slab", serif;
+  --white-color: #fff;
+  --black-color: #333333;
+  --font-2xl: 28px;
+  --font-xl: 24px;
+  --font-l: 20px;
+  --font-m: 16px;
+  --font-s: 14px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: red 1px solid;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--font-m);
+  color: var(--font-color);
+  line-height: var(--font-l);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0px 15px;
+}
+
+.m-none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .m-none {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .pc-none {
+    display: none;
+  }
 }
