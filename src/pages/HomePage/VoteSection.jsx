@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../../components/Button";
 import Title from "../../components/Title";
 import VoteCard from "../../components/VoteCard";
 import { voteMeta } from "../../utils/data";
@@ -36,18 +37,20 @@ const VoteSection = () => {
           return <VoteCard meta={element} key={index} />;
         })}
       </div>
+
+      <Button link="/vote" />
     </StyledVoteSection>
   );
 };
 
 const StyledVoteSection = styled.section`
   position: relative;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0px 10px;
 
   .draw {
-    width: 35%;
-    margin: 40px auto 40px;
+    width: 30%;
 
     @media ${DEVICE.tablet} {
       width: 20%;
@@ -55,31 +58,32 @@ const StyledVoteSection = styled.section`
   }
 
   .draw-1 {
-    position: absolute;
-    top: -10%;
-    left: 5%;
+    position: relative;
+    top: -40%;
+    left: 6%;
 
     @media ${DEVICE.tablet} {
-      top: -70%;
+      top: 100px;
       left: 10%;
     }
   }
   .draw-2 {
-    position: absolute;
+    position: relative;
     top: -15%;
-    right: 5%;
+    right: -33%;
 
     @media ${DEVICE.tablet} {
-      top: -70%;
-      right: 15%;
+      top: 120px;
+      right: -55%;
     }
   }
 
  .title {
-    padding-top: 20%;
+    padding-top: 10%;
 
     @media ${DEVICE.tablet} {
-        padding-top: 0%;
+        padding-top: 15%;
+        padding-bottom: 2%;
       }
   }
 
@@ -88,12 +92,13 @@ const StyledVoteSection = styled.section`
     color: ${COLOR.white};
     width: 90%;
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     @media ${DEVICE.tablet} {
         width: 60%;
         font-size: ${FONT.m};
         line-height: ${FONT.xl};
+        margin-bottom: 40px;
       }
   }
 

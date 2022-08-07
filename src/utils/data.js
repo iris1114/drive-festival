@@ -131,3 +131,52 @@ export const voteMeta = [
     votes: 999,
   },
 ];
+
+export const driveMeta = [
+  {
+    img: "home/drive/drive1.png",
+    title: "車友趣 CAR2DUDE",
+  },
+  {
+    img: "home/drive/drive1.png",
+    title: "車友趣 CAR2DUDE",
+  },
+  {
+    img: "home/drive/drive1.png",
+    title: "車友趣 CAR2DUDE",
+  },
+  {
+    img: "home/drive/drive1.png",
+    title: "車友趣 CAR2DUDE",
+  },
+];
+
+export const partnerMMeta = [
+  {
+    img: "home/partner/m_logo1.png",
+    title: "車友趣",
+  },
+  {
+    img: "home/partner/m_logo1.png",
+    title: "車友趣",
+  },
+  {
+    img: "home/partner/m_logo1.png",
+    title: "車友趣",
+  },
+];
+
+export const partnerPcMeta = [
+  {
+    img: "home/partner/pc_logo1.png",
+    title: "車友趣",
+  },
+  {
+    img: "home/partner/pc_logo1.png",
+    title: "車友趣",
+  },
+  {
+    img: "home/partner/pc_logo1.png",
+    title: "車友趣",
+  },
+];

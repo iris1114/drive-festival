@@ -6,6 +6,7 @@ export const COLOR = {
   orange: "#ff7e35",
   darkGrey: "#666666",
   grey: "#b3b3b3",
+  footerBg: "#e6e6e6",
 };
 
 export const FONT = {

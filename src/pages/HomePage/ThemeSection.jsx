@@ -54,17 +54,17 @@ const StyledThemeSection = styled.section`
   margin: auto;
 
   .draw {
-    width: 35%;
+    width: 30%;
     margin: 40px auto 40px;
 
     @media ${DEVICE.tablet} {
-      width: 20%;
+      width: 18%;
     }
   }
 
   .draw-1 {
     position: absolute;
-    top: -18%;
+    top: -5%;
     left: 5%;
 
     @media ${DEVICE.tablet} {
@@ -74,45 +74,52 @@ const StyledThemeSection = styled.section`
   }
   .draw-2 {
     position: absolute;
-    top: -15%;
+    top: -5%;
     right: 5%;
 
     @media ${DEVICE.tablet} {
-      top: 0%;
+      top: 5%;
       right: 10%;
     }
   }
 
   .title {
-    padding-top: 15%;
+    padding-top: 30%;
+
+    @media ${DEVICE.tablet} {
+      padding-top: 18%;
+    }
   }
 
   .slider {
     position: relative;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 0px 5px;
 
     @media ${DEVICE.tablet} {
       width: 70%;
       margin: auto;
+      margin-top: 2%;
     }
 
     &__content {
       width: 73%;
-      position: relative;
-      top: 115%;
+      position: absolute;
+      top: 69%;
       left: 37%;
       transform: translate(-37%, -115%);
+
+      @media ${DEVICE.tablet} {
+        top: 101%;
+      }
     }
 
     &__text {
-      position: absolute;
-      top: 65%;
-      left: 50%;
-      transform: translateX(-50%);
       width: 70%;
       text-align: center;
       color: ${COLOR.white};
+      margin: auto;
+      margin-top: 20px;
     }
 
     &__title {

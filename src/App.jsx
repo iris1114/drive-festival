@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import MarketPage from "./pages/MarketPage";
 import ThemePage from "./pages/ThemePage";
 import VotePage from "./pages/VotePage";
+import Footer from "./components/layout/Footer";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="drive" element={<DrivePage />} />
         <Route path="market" element={<MarketPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -11,7 +11,7 @@ const Tabs = ({ meta, onTabClick }) => {
     <StyledTabs>
       {meta.map((element, index) => {
         return (
-          <Link to={element.link}>
+          <Link to={element.link} key={index}>
             <div
               className="tab"
               key={index}

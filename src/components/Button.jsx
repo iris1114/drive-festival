@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { DEVICE } from "../utils/device";
 
-const Button = () => {
+const Button = ({ link }) => {
   return (
     <StyledButton>
-      <Link></Link>
+      <Link to={link}>
+        <img src={require("../images/button.png")} alt="button" />
+      </Link>
     </StyledButton>
   );
 };
 
-const StyledButton = styled.div``;
+const StyledButton = styled.div`
+  width: 25%;
+  margin: 5% auto;
+
+  @media ${DEVICE.tablet} {
+    width: 10%;
+  }
+`;
 
 export default Button;

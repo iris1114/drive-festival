@@ -11,10 +11,7 @@ const VoteCard = (props) => {
       </div>
       <div className="text">
         <div className="title">{meta.title}</div>
-        <div className="vote">
-          <div>票數:{meta.votes}票</div>
-          <div className="btn">我要投票</div>
-        </div>
+        <div className="btn">我要試駕</div>
       </div>
     </StyledVoteCard>
   );
@@ -32,6 +29,7 @@ const StyledVoteCard = styled.div`
   }
 
   .text {
+    text-align: center;
     .title {
       font-size: ${FONT.s};
       color: ${COLOR.darkGrey};
@@ -41,26 +39,18 @@ const StyledVoteCard = styled.div`
         font-size: ${FONT.m};
       }
     }
-    .vote {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: ${COLOR.grey};
+    .btn {
+      background-color: ${COLOR.grey};
+      color: ${COLOR.white};
+      padding: 3px 5px;
+      border-radius: 6px;
+      display: inline;
       font-size: ${FONT.xs};
+      cursor: pointer;
 
       @media ${DEVICE.tablet} {
+        padding: 3px 10px;
         font-size: ${FONT.s};
-      }
-
-      .btn {
-        background-color: ${COLOR.grey};
-        color: ${COLOR.white};
-        padding: 0px 3px;
-        border-radius: 4px;
-
-        @media ${DEVICE.tablet} {
-          padding: 0px 10px;
-        }
       }
     }
   }

@@ -4,6 +4,8 @@ import ThemeSection from "./ThemeSection";
 import styled from "styled-components";
 import { DEVICE } from "../../utils/device";
 import VoteSection from "./VoteSection";
+import DriveSection from "./DriveSection";
+import PartnerSection from "./PartnerSection";
 
 const HomePage = () => {
   return (
@@ -14,8 +16,10 @@ const HomePage = () => {
         <div className="theme_section">
           <ThemeSection />
           <VoteSection />
+          <DriveSection />
         </div>
       </div>
+      <PartnerSection />
     </StyledHomePage>
   );
 };
@@ -30,7 +34,6 @@ const StyledHomePage = styled.main`
 
     @media ${DEVICE.tablet}{
       background-image: url(${require("../../images/home/pc_green_bg.png")});
-
     }
   }
 
