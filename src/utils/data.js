@@ -58,81 +58,76 @@ export const homeExhibitionMeta = [
 export const themeTabsMeta = [
   {
     title: "甩尾車神戰",
-    id: "1",
+    id: "theme1",
+    link: "/exhibition",
   },
   {
     title: "紳士之路",
-    id: "2",
+    id: "theme2",
+    link: "/exhibition",
   },
   {
     title: "玩在藝起",
-    id: "3",
+    id: "theme3",
+    link: "/exhibition",
   },
   {
     title: "演唱會",
-    id: "4",
+    id: "theme4",
+    link: "/exhibition",
   },
 ];
 
 export const themeCarsMeta = [
   {
-    id: "1",
-    images: [
-      {
-        link: "/exbition",
-        img: "theme1_1.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_2.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_3.png",
-        target: "self",
-      },
-    ],
+    link: "/exhibition",
+    img: "home/theme/theme1.png",
+    target: "self",
+    title: "甩尾車神戰",
+    desc: "樂團表演，DJ秀 、 精彩舞蹈 、 品牌時間，嗨翻無上限",
   },
   {
-    id: "2",
-    images: [
-      {
-        link: "/exbition",
-        img: "theme1_1.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_2.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_3.png",
-        target: "self",
-      },
-    ],
+    link: "/exhibition",
+    img: "home/theme/theme2.png",
+    target: "self",
+    title: "紳士之路",
+    desc: "樂團表演，DJ秀 、 精彩舞蹈 、 品牌時間，嗨翻無上限",
   },
   {
-    id: "3",
-    images: [
-      {
-        link: "/exbition",
-        img: "theme1_1.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_2.png",
-        target: "self",
-      },
-      {
-        link: "/exbition",
-        img: "theme1_3.png",
-        target: "self",
-      },
-    ],
+    link: "/exhibition",
+    img: "home/theme/theme3.png",
+    target: "self",
+    title: "玩在藝起",
+    desc: "樂團表演，DJ秀 、 精彩舞蹈 、 品牌時間，嗨翻無上限",
+  },
+  {
+    link: "/exhibition",
+    img: "home/theme/theme4.png",
+    target: "self",
+    title: "演唱會",
+    desc: "樂團表演，DJ秀 、 精彩舞蹈 、 品牌時間，嗨翻無上限",
+  },
+];
+
+export const voteMeta = [
+  {
+    img: "home/vote/vote1.png",
+    title: "10/15～即將亮相！",
+    votes: 999,
+  },
+  {
+    img: "home/vote/vote1.png",
+    title: "10/15～即將亮相！",
+    votes: 999,
+  },
+  {
+    img: "home/vote/vote1.png",
+    title: "10/15～即將亮相！",
+    votes: 999,
+  },
+  {
+    img: "home/vote/vote1.png",
+    title: "10/15～即將亮相！",
+    votes: 999,
   },
 ];

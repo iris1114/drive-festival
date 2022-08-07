@@ -7,17 +7,18 @@ const ExhibitInfo = (props) => {
     <StyledExhibitInfo className="info">
       <div className="info__text">
         <div className="info__top">
-          <Link to={meta.link} target={meta.target}></Link>
-          <img
-            className="info__btn"
-            src={require(`../images/home/exhibition/${meta.btnImg}`)}
-            alt={meta.title}
-          />
-          <img
-            className="info__title"
-            src={require(`../images/home/exhibition/${meta.titleImg}`)}
-            alt={meta.title}
-          />
+          <Link to={meta.link} target={meta.target}>
+            <img
+              className="info__btn"
+              src={require(`../images/home/exhibition/${meta.btnImg}`)}
+              alt={meta.title}
+            />
+            <img
+              className="info__title"
+              src={require(`../images/home/exhibition/${meta.titleImg}`)}
+              alt={meta.title}
+            />
+          </Link>
         </div>
         <p className="info__desc">{meta.desc}</p>
       </div>

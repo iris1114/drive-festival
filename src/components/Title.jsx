@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { DEVICE } from "../../utils/device";
+import { DEVICE } from "../utils/device";
 
 const Title = ({ imgSrc, title }) => {
   return (
     <StyledTitile className="title">
-      <img src={require(`../../images/${imgSrc}`)} alt={title} />
+      <img src={require(`../images/${imgSrc}`)} alt={title} />
     </StyledTitile>
   );
 };

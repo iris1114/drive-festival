@@ -1,3 +1,6 @@
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import DrivePage from "./pages/DrivePage";

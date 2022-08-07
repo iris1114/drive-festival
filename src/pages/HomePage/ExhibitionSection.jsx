@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ExhibitInfo from "../../components/ExhibitInfo";
-import Title from "../../components/common/Title";
+import Title from "../../components/Title";
 import { homeExhibitionMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
 
@@ -47,6 +47,9 @@ const StyledExhibitionSection = styled.section``;
 
 const StyledAreaSection = styled.div`
   position: relative;
+  padding-bottom: 20px;
+  max-width: 1400px;
+  margin: auto;
 
   .meta {
     width: 100%;
