@@ -19,25 +19,21 @@ const VoteSection = () => {
         src={require("../../images/home/vote/draw2.png")}
         alt="draw1"
       />
-
       <Title
         className="title"
         imgSrc="home/vote/title.png"
         title="四大主題活動"
       />
-
       <p className="desc">
         台灣首度主題汽車派對饗宴
         以汽車連結生活體驗集結「競速改裝」、「古董經典」、「優雅旅行」三大展區
         超過 150 台車主同場炫車，搭配音樂、特色活動、美食、特色市集。
       </p>
-
       <div className="votes">
         {voteMeta.map((element, index) => {
           return <VoteCard meta={element} key={index} />;
         })}
       </div>
-
       <Button link="/vote" />
     </StyledVoteSection>
   );
@@ -47,7 +43,7 @@ const StyledVoteSection = styled.section`
   position: relative;
   max-width: 1200px;
   margin: auto;
-  padding: 0px 10px;
+  padding: 70px 10px;
 
   .draw {
     width: 30%;
@@ -61,20 +57,49 @@ const StyledVoteSection = styled.section`
     position: relative;
     top: -40%;
     left: 6%;
+    animation: vote-draw1-m 2s linear infinite;
+
+    @keyframes vote-draw1-m {
+      50% {
+        left: 8%;
+      }
+    }
+  
 
     @media ${DEVICE.tablet} {
       top: 100px;
       left: 10%;
+      animation: vote-draw1-pc 2s linear infinite;
+
+      @keyframes vote-draw1-pc {
+        50% {
+          top: 120px;
+        }
+      }
     }
   }
   .draw-2 {
     position: relative;
     top: -15%;
     right: -33%;
+    animation: vote-draw2-m 2s linear infinite;
+
+    @keyframes vote-draw2-m {
+      50% {
+        right: -30%;
+      }
+    }
 
     @media ${DEVICE.tablet} {
       top: 120px;
       right: -55%;
+      animation: vote-draw2-pc 2s linear infinite;
+
+      @keyframes vote-draw2-pc {
+        50% {
+          right: -57%;
+        }
+      }
     }
   }
 

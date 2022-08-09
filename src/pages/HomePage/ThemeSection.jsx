@@ -66,20 +66,50 @@ const StyledThemeSection = styled.section`
     position: absolute;
     top: -5%;
     left: 5%;
+    animation: draw1-m 2s linear infinite;
+
+    @keyframes draw1-m {
+      50% {
+        top: -4%;
+      }
+    }
 
     @media ${DEVICE.tablet} {
       top: -2%;
       left: 10%;
+      animation: draw1-pc 2s linear infinite;
+
+      @keyframes draw1-pc {
+        50% {
+          left: 9%;
+        }
+      }
     }
   }
   .draw-2 {
     position: absolute;
     top: -5%;
     right: 5%;
+    animation: draw2-m 2s linear infinite;
+
+    @keyframes draw2-m {
+      50% {
+        top: -6%;
+        right: 3%;
+      }
+    }
 
     @media ${DEVICE.tablet} {
       top: 5%;
       right: 10%;
+      animation: draw2-pc 2s linear infinite;
+
+      @keyframes draw2-pc {
+        50% {
+          top: 4%;
+          right: 8%;
+        }
+      }
     }
   }
 
@@ -87,7 +117,7 @@ const StyledThemeSection = styled.section`
     padding-top: 30%;
 
     @media ${DEVICE.tablet} {
-      padding-top: 18%;
+      padding-top: 20%;
     }
   }
 

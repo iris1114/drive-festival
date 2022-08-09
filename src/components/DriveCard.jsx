@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
-const VoteCard = (props) => {
-  const meta = props.meta;
+const VoteCard = ({ meta }) => {
   return (
     <StyledVoteCard>
       <div className="img">

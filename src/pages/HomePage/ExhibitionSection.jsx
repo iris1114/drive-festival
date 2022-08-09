@@ -1,44 +1,48 @@
+import { Reveal } from "react-awesome-reveal";
 import styled from "styled-components";
 import ExhibitInfo from "../../components/ExhibitInfo";
 import Title from "../../components/Title";
 import { homeExhibitionMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
+import { fadeInUp } from "../../utils/styles";
 
 const ExhibitionSection = () => {
   return (
     <StyledExhibitionSection>
-      <Title imgSrc="home/exhibition/title.png" title="三大活動區" />
-      <StyledAreaSection>
-        <img
-          className="pc-none"
-          src={require("../../images/home/exhibition/m_bg.png")}
-          alt="bg"
-        />
-        <img
-          className="m-none"
-          src={require("../../images/home/exhibition/pc_bg.png")}
-          alt="bg"
-        />
-        <div className="meta">
-          {homeExhibitionMeta.map((element, index) => {
-            return (
-              <div className="meta__list" key={index}>
-                <ExhibitInfo meta={element} />
-              </div>
-            );
-          })}
-        </div>
-        <img
-          className="m-none animate1"
-          src={require("../../images/home/exhibition/animate1.png")}
-          alt="animate"
-        />
-        <img
-          className="m-none animate2"
-          src={require("../../images/home/exhibition/animate2.png")}
-          alt="animate"
-        />
-      </StyledAreaSection>
+      <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+        <Title imgSrc="home/exhibition/title.png" title="三大活動區" />
+        <StyledAreaSection>
+          <img
+            className="pc-none"
+            src={require("../../images/home/exhibition/m_bg.png")}
+            alt="bg"
+          />
+          <img
+            className="m-none"
+            src={require("../../images/home/exhibition/pc_bg.png")}
+            alt="bg"
+          />
+          <div className="meta">
+            {homeExhibitionMeta.map((element, index) => {
+              return (
+                <div className="meta__list" key={index}>
+                  <ExhibitInfo meta={element} />
+                </div>
+              );
+            })}
+          </div>
+          <img
+            className="m-none animate1"
+            src={require("../../images/home/exhibition/animate1.png")}
+            alt="animate"
+          />
+          <img
+            className="m-none animate2"
+            src={require("../../images/home/exhibition/animate2.png")}
+            alt="animate"
+          />
+        </StyledAreaSection>
+      </Reveal>
     </StyledExhibitionSection>
   );
 };
@@ -113,6 +117,14 @@ const StyledAreaSection = styled.div`
     position: absolute;
     top: 20%;
     left: 20%;
+    animation: animate1 2s linear infinite;
+
+    @keyframes animate1 {
+      50% {
+        top: 21%;
+        left: 21%;
+      }
+    }
   }
 
   .animate2 {
@@ -120,6 +132,13 @@ const StyledAreaSection = styled.div`
     position: absolute;
     top: 80%;
     left: 20%;
+    animation: animate2 2s linear infinite;
+
+    @keyframes animate2 {
+      50% {
+        top: 81%;
+      }
+    }
   }
 `;
 

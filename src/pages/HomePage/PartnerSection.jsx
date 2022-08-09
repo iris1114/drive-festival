@@ -72,11 +72,26 @@ const StyledPartnerSection = styled.section`
     position: absolute;
     top: -18%;
     left: 5%;
+    animation: partner-draw1-pc 2s linear infinite;
+
+    @keyframes partner-draw1-pc {
+      50% {
+        top: -16%;
+      }
+    }
   }
   .draw-2 {
     position: absolute;
     top: -15%;
     right: 5%;
+    animation: partner-draw2-pc 2s linear infinite;
+
+    @keyframes partner-draw2-pc {
+      50% {
+        top: -18%;
+        right: 3%;
+      }
+    }
   }
 
   .title {

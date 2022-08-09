@@ -72,27 +72,56 @@ const StyledDriveSection = styled.section`
     top: -40%;
     left: 6%;
     width: 36%;
+    animation: drive-draw1-m 2s linear infinite;
+
+    @keyframes drive-draw1-m {
+      50% {
+        left: 2%;
+      }
+    }
 
     @media ${DEVICE.tablet} {
       top: -70%;
       left: 0%;
       width: 20%;
+      animation: drive-draw1-pc 2s linear infinite;
+
+      @keyframes drive-draw1-pc {
+        50% {
+          left: 2%;
+        }
+      }
+    
     }
   }
   .draw-2 {
     position: relative;
     top: -50px;
     right: -25%;
+    animation: drive-draw2-m 2s linear infinite;
 
+    @keyframes drive-draw2-m {
+      50% {
+        top: -40px;
+      }
+    }
+   
     @media ${DEVICE.tablet} {
       top: -70%;
       right: -60%;
       width: 18%;
+      animation: drive-draw2-pc 2s linear infinite;
+
+      @keyframes drive-draw2-pc {
+        50% {
+          right: -61%;
+        }
+      }
     }
   }
 
  .title {
-    padding-top: 10%;
+    padding-top: 15%;
 
     @media ${DEVICE.tablet} {
         padding-top: 0%;
@@ -129,7 +158,7 @@ const StyledDriveSection = styled.section`
     width: 25%;
 
     @media ${DEVICE.tablet} {
-      top: -130px;
+      top: -110px;
       left: 10%;
       width: 15%;
     }
@@ -142,7 +171,7 @@ const StyledDriveSection = styled.section`
     width: 25%;
 
     @media ${DEVICE.tablet} {
-      top: -150px;
+      top: -120px;
       left: 60%;
       width: 15%;
     }

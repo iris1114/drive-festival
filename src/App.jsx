@@ -10,21 +10,24 @@ import MarketPage from "./pages/MarketPage";
 import ThemePage from "./pages/ThemePage";
 import VotePage from "./pages/VotePage";
 import Footer from "./components/layout/Footer";
+import { DialogProvider } from "./contexts/DialogContent";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="exhibition" element={<ExhibitionPage />} />
-        <Route path="theme" element={<ThemePage />} />
-        <Route path="vote" element={<VotePage />} />
-        <Route path="drive" element={<DrivePage />} />
-        <Route path="market" element={<MarketPage />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <DialogProvider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="exhibition" element={<ExhibitionPage />} />
+          <Route path="theme" element={<ThemePage />} />
+          <Route path="vote" element={<VotePage />} />
+          <Route path="drive" element={<DrivePage />} />
+          <Route path="market" element={<MarketPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </DialogProvider>
   );
 };
 

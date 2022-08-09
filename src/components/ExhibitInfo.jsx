@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ExhibitInfo = (props) => {
-  const meta = props.meta;
+const ExhibitInfo = ({ meta }) => {
   return (
     <StyledExhibitInfo className="info">
       <div className="info__text">

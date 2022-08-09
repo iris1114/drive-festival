@@ -6,7 +6,7 @@ const Button = ({ link }) => {
   return (
     <StyledButton>
       <Link to={link}>
-        <img src={require("../images/button.png")} alt="button" />
+        <img src={require("../images/common/button.png")} alt="button" />
       </Link>
     </StyledButton>
   );

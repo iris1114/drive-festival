@@ -1,11 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import DialogContext from "../contexts/DialogContent";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
-const VoteCard = (props) => {
-  const meta = props.meta;
+const VoteCard = ({ meta }) => {
+  const { setDialogData } = useContext(DialogContext);
+
   return (
-    <StyledVoteCard>
+    <StyledVoteCard
+      onClick={() => {
+        setDialogData({ meta: meta, open: true, category: "vote" });
+      }}
+    >
       <div className="img">
         <img src={require(`../images/${meta.img}`)} alt={meta.title} />
       </div>
@@ -25,6 +32,7 @@ const StyledVoteCard = styled.div`
   width: calc(50% - 10px);
   background-color: ${COLOR.white};
   margin: 5px;
+  cursor: pointer;
 
   @media ${DEVICE.tablet} {
     width: calc(25% - 20px);

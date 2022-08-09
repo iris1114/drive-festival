@@ -1,6 +1,7 @@
+import { Reveal } from "react-awesome-reveal";
 import styled from "styled-components";
 import { DEVICE } from "../../utils/device";
-import { COLOR, FONT } from "../../utils/styles";
+import { COLOR, fadeInUp, FONT } from "../../utils/styles";
 
 const HeroSection = () => {
   return (
@@ -16,33 +17,51 @@ const HeroSection = () => {
         alt="bg"
       />
       <StyledHeroWrap className="hero">
-        <img
-          className="hero__main pc-none"
-          src={require("../../images/home/hero/m_hero.png")}
-          alt="hero"
-        />
-        <img
-          className="hero__main m-none"
-          src={require("../../images/home/hero/pc_hero.png")}
-          alt="hero"
-        />
+        <Reveal
+          className="hero__main"
+          keyframes={fadeInUp}
+          delay={300}
+          duration={600}
+        >
+          <img
+            className="pc-none"
+            src={require("../../images/home/hero/m_hero.png")}
+            alt="hero"
+          />
+        </Reveal>
+        <Reveal
+          className="hero__main"
+          keyframes={fadeInUp}
+          delay={300}
+          duration={600}
+          triggerOnce
+        >
+          <img
+            className=" m-none"
+            src={require("../../images/home/hero/pc_hero.png")}
+            alt="hero"
+          />
+        </Reveal>
 
-        <img
-          className="hero__car hero__car-1"
-          src={require("../../images/home/hero/car1.png")}
-          alt="car"
-        />
-        <img
-          className="hero__car hero__car-2"
-          src={require("../../images/home/hero/car2.png")}
-          alt="car"
-        />
-        <img
-          className="hero__car hero__car-3"
-          src={require("../../images/home/hero/car3.png")}
-          alt="car"
-        />
+        <div className="hero__car hero__car-1">
+          <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+            <img src={require("../../images/home/hero/car1.png")} alt="car" />
+          </Reveal>
+        </div>
+
+        <div className="hero__car hero__car-2">
+          <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+            <img src={require("../../images/home/hero/car2.png")} alt="car" />
+          </Reveal>
+        </div>
+
+        <div className="hero__car hero__car-3">
+          <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+            <img src={require("../../images/home/hero/car3.png")} alt="car" />
+          </Reveal>
+        </div>
       </StyledHeroWrap>
+
       <StyledTitleWrap className="title">
         <img
           className="pc-none title__main"
@@ -56,25 +75,27 @@ const HeroSection = () => {
         />
 
         <div className="title__text">
-          <img
-            className="pc-none title__sub1"
-            src={require("../../images/home/hero/m_subtitle1.png")}
-            alt="title__sub1"
-          />
-          <img
-            className="m-none title__sub1"
-            src={require("../../images/home/hero/pc_subtitle1.png")}
-            alt="title__sub1"
-          />
-          <p className="title__desc">
-            台灣首度主題汽車派對饗宴，以汽車連結生活體驗集結「競速改裝」、「古董經典」、「優雅旅行」三大展區，超過
-            150 台車主同場炫車，搭配音樂、特色活動、美食、特色市集。
-          </p>
-          <img
-            className="title__sub2"
-            src={require("../../images/home/hero/m_subtitle2.png")}
-            alt="title__sub2"
-          />
+          <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+            <img
+              className="pc-none title__sub1"
+              src={require("../../images/home/hero/m_subtitle1.png")}
+              alt="title__sub1"
+            />
+            <img
+              className="m-none title__sub1"
+              src={require("../../images/home/hero/pc_subtitle1.png")}
+              alt="title__sub1"
+            />
+            <p className="title__desc">
+              台灣首度主題汽車派對饗宴，以汽車連結生活體驗集結「競速改裝」、「古董經典」、「優雅旅行」三大展區，超過
+              150 台車主同場炫車，搭配音樂、特色活動、美食、特色市集。
+            </p>
+            <img
+              className="title__sub2"
+              src={require("../../images/home/hero/m_subtitle2.png")}
+              alt="title__sub2"
+            />
+          </Reveal>
         </div>
 
         <img
@@ -99,12 +120,13 @@ const StyledHeroSection = styled.section`
 
 const StyledHeroWrap = styled.div`
   padding: 0px 15px;
+
   .hero {
     &__main {
       position: absolute;
       top: 10%;
-      left: 50%;
-      transform: translate(-50%, -10%);
+      left: 0%;
+      transform: translate(0%, -10%);
       padding: 0px 15px;
 
       @media ${DEVICE.tablet} {
@@ -113,40 +135,84 @@ const StyledHeroWrap = styled.div`
     }
 
     &__car {
-      width: 33%;
+      width: 30%;
       position: absolute;
 
       @media ${DEVICE.tablet} {
-        width: 17%;
+        width: 16%;
       }
 
       &-1 {
-        top: 20%;
+        top: 23%;
         left: 6%;
+        animation: float1-m 2s linear infinite;
+
+        @keyframes float1-m {
+          50% {
+            top: 22.5%;
+          }
+        }
 
         @media ${DEVICE.tablet} {
-          top: 30%;
-          left: 24%;
+          top: 32%;
+          left: 25%;
+          animation: float1-pc 1.5s linear infinite;
+
+          @keyframes float1-pc {
+            50% {
+              top: 31%;
+              left: 23%;
+            }
+          }
         }
       }
 
       &-2 {
-        top: 25%;
-        left: 30%;
+        top: 27%;
+        left: 32%;
+        animation: float2-m 3s linear infinite;
+
+        @keyframes float2-m {
+          50% {
+            top: 27.5%;
+          }
+        }
 
         @media ${DEVICE.tablet} {
-          top: 33%;
-          left: 46%;
+          top: 35%;
+          left: 48%;
+          animation: float2-pc 3s linear infinite;
+
+          @keyframes float2-pc {
+            50% {
+              top: 36%;
+            }
+          }
         }
       }
 
       &-3 {
         top: 23%;
-        right: 6.5%;
+        right: 7%;
+        animation: float3-m 1.5s linear infinite;
+
+        @keyframes float3-m {
+          50% {
+            top: 23.5%;
+          }
+        }
 
         @media ${DEVICE.tablet} {
           top: 30%;
           right: 6%;
+          animation: float3-pc 3s linear infinite;
+
+          @keyframes float3-pc {
+            50% {
+              top: 32%;
+              right: 8%;
+            }
+          }
         }
       }
     }
@@ -157,7 +223,7 @@ const StyledTitleWrap = styled.div`
   .title {
     &__main {
       position: absolute;
-      top: 40%;
+      top: 42%;
       left: 50%;
       transform: translate(-50%, -40%);
       width: 90%;

@@ -113,21 +113,25 @@ export const voteMeta = [
   {
     img: "home/vote/vote1.png",
     title: "10/15～即將亮相！",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
     votes: 999,
   },
   {
     img: "home/vote/vote1.png",
     title: "10/15～即將亮相！",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
     votes: 999,
   },
   {
     img: "home/vote/vote1.png",
     title: "10/15～即將亮相！",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
     votes: 999,
   },
   {
     img: "home/vote/vote1.png",
     title: "10/15～即將亮相！",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
     votes: 999,
   },
 ];
