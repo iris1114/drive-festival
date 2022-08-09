@@ -1,8 +1,8 @@
 import { Reveal } from "react-awesome-reveal";
 import styled from "styled-components";
-import ExhibitInfo from "../../components/ExhibitInfo";
+import ExhibitionInfo from "../../components/ExhibitionInfo";
 import Title from "../../components/Title";
-import { homeExhibitionMeta } from "../../utils/data";
+import { exhibitionMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
 import { fadeInUp } from "../../utils/styles";
 
@@ -23,10 +23,10 @@ const ExhibitionSection = () => {
             alt="bg"
           />
           <div className="meta">
-            {homeExhibitionMeta.map((element, index) => {
+            {exhibitionMeta.map((element, index) => {
               return (
                 <div className="meta__list" key={index}>
-                  <ExhibitInfo meta={element} />
+                  <ExhibitionInfo meta={element} />
                 </div>
               );
             })}

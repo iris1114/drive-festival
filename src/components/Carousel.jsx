@@ -27,8 +27,11 @@ const Carousel = ({ meta, onActive }) => {
         {meta.map((element, index) => {
           return (
             <SwiperSlide key={index}>
-              <Link to={element.link}>
-                <img src={require(`../images/${element.img}`)} alt="banner" />
+              <Link to={`/theme/${element.id}`} target={element.target}>
+                <img
+                  src={require(`../images/home/theme/${element.img}`)}
+                  alt="banner"
+                />
               </Link>
             </SwiperSlide>
           );

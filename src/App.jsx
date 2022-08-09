@@ -11,6 +11,8 @@ import ThemePage from "./pages/ThemePage";
 import VotePage from "./pages/VotePage";
 import Footer from "./components/layout/Footer";
 import { DialogProvider } from "./contexts/DialogContent";
+import ExhibitionDetialPage from "./pages/ExhibitionDetialPage";
+import ThemeDetialPage from "./pages/ThemeDetialPage";
 
 const App = () => {
   return (
@@ -20,7 +22,12 @@ const App = () => {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="exhibition" element={<ExhibitionPage />} />
+          <Route
+            path={`exhibition/:exhibitionId`}
+            element={<ExhibitionDetialPage />}
+          ></Route>
           <Route path="theme" element={<ThemePage />} />
+          <Route path={`theme/:themeId`} element={<ThemeDetialPage />}></Route>
           <Route path="vote" element={<VotePage />} />
           <Route path="drive" element={<DrivePage />} />
           <Route path="market" element={<MarketPage />} />

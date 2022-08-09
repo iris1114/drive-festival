@@ -30,7 +30,6 @@ const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${COLOR.footerBg};
   display: flex;
-  margin-top: 50px;
   padding: 30px 15px;
   align-items: center;
   flex-wrap: wrap;

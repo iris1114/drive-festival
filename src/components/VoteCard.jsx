@@ -14,7 +14,10 @@ const VoteCard = ({ meta }) => {
       }}
     >
       <div className="img">
-        <img src={require(`../images/${meta.img}`)} alt={meta.title} />
+        <img
+          src={require(`../images/home/vote/${meta.img}`)}
+          alt={meta.title}
+        />
       </div>
       <div className="text">
         <div className="title">{meta.title}</div>

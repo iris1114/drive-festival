@@ -8,7 +8,7 @@ import { COLOR, FONT } from "../../utils/styles";
 
 const VoteSection = () => {
   return (
-    <StyledVoteSection>
+    <StyledVoteSection className="vote-section">
       <img
         className="draw draw-1"
         src={require("../../images/home/vote/draw1.png")}

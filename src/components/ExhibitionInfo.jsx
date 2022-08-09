@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ExhibitInfo = ({ meta }) => {
+const ExhibitionInfo = ({ meta }) => {
   return (
-    <StyledExhibitInfo className="info">
+    <StyledExhibitionInfo className="info">
       <div className="info__text">
         <div className="info__top">
-          <Link to={meta.link} target={meta.target}>
+          <Link to={`/exhibition/${meta.id}`} target={meta.target}>
             <img
               className="info__btn"
               src={require(`../images/home/exhibition/${meta.btnImg}`)}
@@ -27,11 +27,11 @@ const ExhibitInfo = ({ meta }) => {
           alt={meta.title}
         />
       </div>
-    </StyledExhibitInfo>
+    </StyledExhibitionInfo>
   );
 };
 
-const StyledExhibitInfo = styled.div`
+const StyledExhibitionInfo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,4 +60,4 @@ const StyledExhibitInfo = styled.div`
   }
 `;
 
-export default ExhibitInfo;
+export default ExhibitionInfo;

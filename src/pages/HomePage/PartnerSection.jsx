@@ -29,7 +29,7 @@ const PartnerSection = () => {
             return (
               <div className="box__logo" key={index}>
                 <img
-                  src={require(`../../images/${element.img}`)}
+                  src={require(`../../images/home/partner/${element.img}`)}
                   alt={element.title}
                 />
               </div>
@@ -45,7 +45,7 @@ const PartnerSection = () => {
             return (
               <div className="box__logo" key={index}>
                 <img
-                  src={require(`../../images/${element.img}`)}
+                  src={require(`../../images/home/partner/${element.img}`)}
                   alt={element.title}
                 />
               </div>
@@ -62,6 +62,7 @@ const StyledPartnerSection = styled.section`
   position: relative;
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 50px;
 
   .draw {
     width: 10%;

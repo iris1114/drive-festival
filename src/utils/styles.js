@@ -9,6 +9,7 @@ export const COLOR = {
   darkGrey: "#666666",
   grey: "#b3b3b3",
   footerBg: "#e6e6e6",
+  fontBlack: "#4d4d4d",
 };
 
 export const FONT = {
@@ -17,6 +18,7 @@ export const FONT = {
   m: "20px",
   l: "24px",
   xl: "30px",
+  xxl: "36px",
 };
 
 export const fadeInUp = keyframes`

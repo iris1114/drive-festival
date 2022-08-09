@@ -121,7 +121,7 @@ const StyledDriveSection = styled.section`
   }
 
  .title {
-    padding-top: 15%;
+    padding-top: 10%;
 
     @media ${DEVICE.tablet} {
         padding-top: 0%;

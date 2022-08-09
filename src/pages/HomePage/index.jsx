@@ -2,7 +2,6 @@ import HeroSection from "./HeroSection";
 import ExhibitionSection from "./ExhibitionSection";
 import ThemeSection from "./ThemeSection";
 import styled from "styled-components";
-import { DEVICE } from "../../utils/device";
 import VoteSection from "./VoteSection";
 import DriveSection from "./DriveSection";
 import PartnerSection from "./PartnerSection";
@@ -11,6 +10,7 @@ import { fadeInUp } from "../../utils/styles";
 import DialogContext from "../../contexts/DialogContent";
 import { useContext } from "react";
 import Dialog from "../../components/dialog/index";
+import PageBg from "../../components/PageBg";
 
 const HomePage = () => {
   const { dialogData, setDialogData } = useContext(DialogContext);
@@ -19,13 +19,13 @@ const HomePage = () => {
     <StyledHomePage>
       <HeroSection />
       <ExhibitionSection />
-      <div className="grass_bg">
+      <PageBg pcImg="bg/pc_green_bg.png" mImg="bg/m_green_bg.png">
         <Reveal keyframes={fadeInUp} delay={300} duration={600}>
           <ThemeSection />
           <VoteSection />
           <DriveSection />
         </Reveal>
-      </div>
+      </PageBg>
       <PartnerSection />
       {dialogData.open && (
         <Dialog
@@ -44,17 +44,6 @@ const HomePage = () => {
 
 const StyledHomePage = styled.main`
   overflow: hidden;
-
-  .grass_bg {
-    background-image: url(${require("../../images/home/m_green_bg.png")});
-    background-repeat: none;
-    background-size: cover;
-    padding:50px 0px 200px;
-
-    @media ${DEVICE.tablet}{
-      background-image: url(${require("../../images/home/pc_green_bg.png")});
-    }
-  }
   }
 `;
 

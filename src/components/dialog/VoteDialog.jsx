@@ -6,7 +6,10 @@ const VoteDialog = ({ meta }) => {
   return (
     <StyledVoteDialog>
       <div className="dialog__img">
-        <img src={require(`../../images/${meta.img}`)} alt={meta.title} />
+        <img
+          src={require(`../../images/home/vote/${meta.img}`)}
+          alt={meta.title}
+        />
       </div>
 
       <div className="dialog__text">
