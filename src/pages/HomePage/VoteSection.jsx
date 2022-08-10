@@ -1,12 +1,23 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import Tabs from "../../components/Tabs";
 import Title from "../../components/Title";
 import VoteCard from "../../components/VoteCard";
-import { voteMeta } from "../../utils/data";
+import { voteMeta, voteTabsMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
-import { COLOR, FONT } from "../../utils/styles";
 
-const VoteSection = () => {
+const VoteSection = ({ moreBtn, slice }) => {
+  const [tabId, setTabId] = useState("voteHotCar");
+
+  const handleTabClick = (id) => {
+    setTabId(id);
+  };
+
+  const carMeta = voteMeta.filter((element) => {
+    return element.category.includes(tabId);
+  });
+
   return (
     <StyledVoteSection className="vote-section">
       <img
@@ -19,22 +30,14 @@ const VoteSection = () => {
         src={require("../../images/home/vote/draw2.png")}
         alt="draw1"
       />
-      <Title
-        className="title"
-        imgSrc="home/vote/title.png"
-        title="四大主題活動"
-      />
-      <p className="desc">
-        台灣首度主題汽車派對饗宴
-        以汽車連結生活體驗集結「競速改裝」、「古董經典」、「優雅旅行」三大展區
-        超過 150 台車主同場炫車，搭配音樂、特色活動、美食、特色市集。
-      </p>
+      <Title className="title" imgSrc="home/vote/title.png" title="展車票選" />
+      <Tabs meta={voteTabsMeta} onTabClick={handleTabClick} />
       <div className="votes">
-        {voteMeta.map((element, index) => {
+        {carMeta.slice(0, slice).map((element, index) => {
           return <VoteCard meta={element} key={index} />;
         })}
       </div>
-      <Button link="/vote" />
+      {moreBtn && <Button link="/vote" />}
     </StyledVoteSection>
   );
 };
@@ -105,27 +108,13 @@ const StyledVoteSection = styled.section`
 
  .title {
     padding-top: 10%;
-
+  
     @media ${DEVICE.tablet} {
         padding-top: 15%;
         padding-bottom: 2%;
       }
   }
 
-  .desc{
-    text-align: center;
-    color: ${COLOR.white};
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
-
-    @media ${DEVICE.tablet} {
-        width: 60%;
-        font-size: ${FONT.m};
-        line-height: ${FONT.xl};
-        margin-bottom: 40px;
-      }
-  }
 
   .votes{
     display: flex;

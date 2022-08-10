@@ -22,8 +22,8 @@ const HomePage = () => {
       <PageBg pcImg="bg/pc_green_bg.png" mImg="bg/m_green_bg.png">
         <Reveal keyframes={fadeInUp} delay={300} duration={600}>
           <ThemeSection />
-          <VoteSection />
-          <DriveSection />
+          <VoteSection moreBtn={true} slice="4" />
+          <DriveSection moreBtn={true} slice="4" />
         </Reveal>
       </PageBg>
       <PartnerSection />

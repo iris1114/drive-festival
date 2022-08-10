@@ -28,8 +28,8 @@ const App = () => {
           ></Route>
           <Route path="theme" element={<ThemePage />} />
           <Route path={`theme/:themeId`} element={<ThemeDetialPage />}></Route>
-          <Route path="vote" element={<VotePage />} />
-          <Route path="drive" element={<DrivePage />} />
+          <Route path="vote" element={<VotePage moreBtn={false} />} />
+          <Route path="drive" element={<DrivePage moreBtn={false} />} />
           <Route path="market" element={<MarketPage />} />
         </Routes>
         <Footer />

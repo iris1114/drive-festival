@@ -6,7 +6,7 @@ import { driveMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
 import { COLOR, FONT } from "../../utils/styles";
 
-const DriveSection = () => {
+const DriveSection = ({ moreBtn, slice }) => {
   return (
     <StyledDriveSection>
       <img
@@ -33,12 +33,13 @@ const DriveSection = () => {
       </p>
 
       <div className="votes">
-        {driveMeta.map((element, index) => {
+        {driveMeta.slice(0, slice).map((element, index) => {
           return <DriveCard meta={element} key={index} />;
         })}
       </div>
 
-      <Button link="/dive" />
+      {moreBtn && <Button link="/dive" />}
+
       <img
         className="draw draw-3"
         src={require("../../images/home/drive/draw3.png")}

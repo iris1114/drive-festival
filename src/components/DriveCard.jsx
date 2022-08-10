@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import DialogContext from "../contexts/DialogContent";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
-const VoteCard = ({ meta }) => {
+const DriveCard = ({ meta }) => {
+  const { setDialogData } = useContext(DialogContext);
+
   return (
-    <StyledVoteCard>
+    <StyledDriveCard
+      onClick={() => {
+        setDialogData({ meta: meta, open: true, category: "drive" });
+      }}
+    >
       <div className="img">
         <img
           src={require(`../images/home/drive/${meta.img}`)}
@@ -15,11 +23,11 @@ const VoteCard = ({ meta }) => {
         <div className="title">{meta.title}</div>
         <div className="btn">我要試駕</div>
       </div>
-    </StyledVoteCard>
+    </StyledDriveCard>
   );
 };
 
-const StyledVoteCard = styled.div`
+const StyledDriveCard = styled.div`
   padding: 10px;
   width: calc(50% - 10px);
   background-color: ${COLOR.white};
@@ -58,4 +66,4 @@ const StyledVoteCard = styled.div`
   }
 `;
 
-export default VoteCard;
+export default DriveCard;

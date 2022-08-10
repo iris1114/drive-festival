@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { DEVICE } from "../../utils/device";
 import { COLOR } from "../../utils/styles";
+import DriveDialog from "./DriveDialog";
 import VoteDialog from "./VoteDialog";
 
 const Dialog = ({ meta, onClose }) => {
@@ -12,7 +13,11 @@ const Dialog = ({ meta, onClose }) => {
     <StyledDialog>
       <div className="dialog">
         <div className="dialog__contents">
-          {meta.category === "vote" ? <VoteDialog meta={meta.meta} /> : null}
+          {meta.category === "vote" ? (
+            <VoteDialog meta={meta.meta} />
+          ) : meta.category === "drive" ? (
+            <DriveDialog meta={meta.meta} />
+          ) : null}
         </div>
         <div className="dialog__close" onClick={handleCloseClick}>
           <img
@@ -42,16 +47,17 @@ const StyledDialog = styled.div`
     background-color: ${COLOR.white};
     width: 90%;
     margin: auto;
-    padding: 15px 20px;
+    padding: 30px 20px;
 
     @media ${DEVICE.tablet} {
-      width: 50%;
+      width: 40%;
+      padding: 30px;
     }
 
     &__close {
       position: absolute;
-      top: 2%;
-      right: 3%;
+      top: 1%;
+      right: 1%;
       cursor: pointer;
       width: 15px;
     }

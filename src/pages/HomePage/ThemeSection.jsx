@@ -121,6 +121,9 @@ const StyledThemeSection = styled.section`
     }
   }
 
+  .tab {
+    background-color: ${COLOR.orange};
+  }
   .slider {
     position: relative;
     margin-top: 30px;
@@ -138,6 +141,10 @@ const StyledThemeSection = styled.section`
       top: 69%;
       left: 37%;
       transform: translate(-37%, -115%);
+
+      @media ${DEVICE.mobileL} {
+        top: 71%;
+      }
 
       @media ${DEVICE.tablet} {
         top: 101%;

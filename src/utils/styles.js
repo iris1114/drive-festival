@@ -6,10 +6,13 @@ export const COLOR = {
   hoverBg: "#ff7e35",
   darkGreen: "#228773",
   orange: "#ff7e35",
+  subOrange: "#f7931e",
   darkGrey: "#666666",
   grey: "#b3b3b3",
   footerBg: "#e6e6e6",
   fontBlack: "#4d4d4d",
+  red: "#ff0000",
+  formColor: "#808080",
 };
 
 export const FONT = {
