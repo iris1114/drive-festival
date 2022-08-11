@@ -18,7 +18,9 @@ const HomePage = () => {
   return (
     <StyledHomePage>
       <HeroSection />
-      <ExhibitionSection />
+      <Reveal keyframes={fadeInUp} delay={600} duration={600}>
+        <ExhibitionSection />
+      </Reveal>
       <PageBg pcImg="bg/pc_green_bg.png" mImg="bg/m_green_bg.png">
         <Reveal keyframes={fadeInUp} delay={300} duration={600}>
           <ThemeSection />

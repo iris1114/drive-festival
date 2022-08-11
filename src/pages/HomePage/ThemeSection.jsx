@@ -28,11 +28,10 @@ const ThemeSection = () => {
         alt="draw1"
       />
 
-      <Title
-        className="title"
-        imgSrc="home/theme/title.png"
-        title="四大主題活動"
-      />
+      <div className="title-img">
+        <Title imgSrc="home/theme/title.png" title="四大主題活動" />
+      </div>
+
       <Tabs meta={themeTabsMeta} />
       <div className="slider">
         <img src={require("../../images/home/theme/tv.png")} alt="tv" />
@@ -113,7 +112,7 @@ const StyledThemeSection = styled.section`
     }
   }
 
-  .title {
+  .title-img {
     padding-top: 30%;
 
     @media ${DEVICE.tablet} {

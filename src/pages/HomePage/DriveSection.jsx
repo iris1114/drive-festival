@@ -19,12 +19,9 @@ const DriveSection = ({ moreBtn, slice }) => {
         src={require("../../images/home/drive/draw2.png")}
         alt="draw1"
       />
-
-      <Title
-        className="title"
-        imgSrc="home/drive/title.png"
-        title="四大主題活動"
-      />
+      <div className="title-img">
+        <Title imgSrc="home/drive/title.png" title="四大主題活動" />
+      </div>
 
       <p className="desc">
         台灣首度主題汽車派對饗宴以汽車連結生活體驗
@@ -121,7 +118,7 @@ const StyledDriveSection = styled.section`
     }
   }
 
- .title {
+ .title-img {
     padding-top: 10%;
 
     @media ${DEVICE.tablet} {

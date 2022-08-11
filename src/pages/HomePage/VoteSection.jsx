@@ -30,7 +30,10 @@ const VoteSection = ({ moreBtn, slice }) => {
         src={require("../../images/home/vote/draw2.png")}
         alt="draw1"
       />
-      <Title className="title" imgSrc="home/vote/title.png" title="展車票選" />
+      <div className="title-img">
+        <Title imgSrc="home/vote/title.png" title="展車票選" />
+      </div>
+
       <Tabs meta={voteTabsMeta} onTabClick={handleTabClick} />
       <div className="votes">
         {carMeta.slice(0, slice).map((element, index) => {
@@ -106,7 +109,7 @@ const StyledVoteSection = styled.section`
     }
   }
 
- .title {
+ .title-img {
     padding-top: 10%;
   
     @media ${DEVICE.tablet} {
