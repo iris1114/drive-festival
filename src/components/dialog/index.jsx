@@ -57,7 +57,7 @@ const StyledDialog = styled.div`
     &__close {
       position: absolute;
       top: 1%;
-      right: 1%;
+      right: 1.5%;
       cursor: pointer;
       width: 15px;
     }

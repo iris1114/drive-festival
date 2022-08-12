@@ -43,6 +43,7 @@ const StyledVoteCard = styled.div`
   }
 
   .text {
+    padding: 15px 0px 5px;
     .title {
       font-size: ${FONT.s};
       color: ${COLOR.darkGrey};
@@ -50,6 +51,7 @@ const StyledVoteCard = styled.div`
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+      margin-bottom: 20px;
 
       @media ${DEVICE.tablet} {
         font-size: ${FONT.m};
@@ -69,11 +71,13 @@ const StyledVoteCard = styled.div`
       .btn {
         background-color: ${COLOR.grey};
         color: ${COLOR.white};
-        padding: 0px 3px;
-        border-radius: 4px;
+        padding: 5px 10px;
+        border-radius: 10px;
 
         @media ${DEVICE.tablet} {
-          padding: 0px 10px;
+          padding: 5px 15px;
+          font-size: ${FONT.s};
+          border-radius: 12px;
         }
       }
     }

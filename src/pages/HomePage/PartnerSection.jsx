@@ -117,7 +117,11 @@ const StyledPartnerSection = styled.section`
     }
 
     &__logo {
-      margin-bottom: 15px;
+      margin-bottom: 40px;
+
+      @media ${DEVICE.tablet} {
+        margin-bottom: 45px;
+      }
     }
   }
 `;

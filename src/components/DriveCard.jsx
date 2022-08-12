@@ -18,6 +18,11 @@ const DriveCard = ({ meta }) => {
           src={require(`../images/home/drive/${meta.img}`)}
           alt={meta.title}
         />
+        <img
+          className="icon"
+          src={require(`../images/home/drive/icon.png`)}
+          alt={meta.title}
+        />
       </div>
       <div className="text">
         <div className="title">{meta.title}</div>
@@ -38,12 +43,27 @@ const StyledDriveCard = styled.div`
     margin: 10px;
   }
 
+  .img {
+    position: relative;
+    margin-bottom: 10px;
+
+    .icon {
+      width: 25%;
+      position: absolute;
+      bottom: -15%;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+  }
+
   .text {
     text-align: center;
+    padding: 15px 0px 10px;
     .title {
       font-size: ${FONT.s};
       color: ${COLOR.darkGrey};
-      padding: 10px 0px;
+      padding: 15px 0px;
 
       @media ${DEVICE.tablet} {
         font-size: ${FONT.m};
@@ -52,15 +72,16 @@ const StyledDriveCard = styled.div`
     .btn {
       background-color: ${COLOR.grey};
       color: ${COLOR.white};
-      padding: 3px 5px;
-      border-radius: 6px;
+      padding: 5px 10px;
+      border-radius: 10px;
       display: inline;
       font-size: ${FONT.xs};
       cursor: pointer;
 
       @media ${DEVICE.tablet} {
-        padding: 3px 10px;
+        padding: 5px 15px;
         font-size: ${FONT.s};
+        border-radius: 12px;
       }
     }
   }

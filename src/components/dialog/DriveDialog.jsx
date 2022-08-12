@@ -6,7 +6,10 @@ const DriveDialog = ({ meta }) => {
   return (
     <StyledDriveDialog>
       <div className="dialog__img">
-        <img src={require(`../../images/drive/${meta.img}`)} alt={meta.title} />
+        <img
+          src={require(`../../images/home/drive/${meta.img}`)}
+          alt={meta.title}
+        />
       </div>
 
       <div className="dialog__text">

@@ -401,12 +401,12 @@ export const partnerMMeta = [
     title: "車友趣",
   },
   {
-    img: "m_logo1.png",
-    title: "車友趣",
+    img: "m_logo2.png",
+    title: "好事聯播網",
   },
   {
-    img: "m_logo1.png",
-    title: "車友趣",
+    img: "m_logo3.png",
+    title: "daex",
   },
 ];
 
@@ -416,12 +416,12 @@ export const partnerPcMeta = [
     title: "車友趣",
   },
   {
-    img: "pc_logo1.png",
-    title: "車友趣",
+    img: "pc_logo2.png",
+    title: "好事聯播網",
   },
   {
-    img: "pc_logo1.png",
-    title: "車友趣",
+    img: "pc_logo3.png",
+    title: "daex",
   },
 ];
 
