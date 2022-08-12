@@ -14,7 +14,6 @@ import PageBg from "../../components/PageBg";
 
 const HomePage = () => {
   const { dialogData, setDialogData } = useContext(DialogContext);
-  console.log("text");
 
   return (
     <StyledHomePage>
