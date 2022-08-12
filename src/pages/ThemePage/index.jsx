@@ -22,7 +22,6 @@ const ThemePage = () => {
 const StyledThemePage = styled.section`
   overflow: hidden;
 
-  .draw,
   .title-img {
     display: none;
   }
@@ -33,6 +32,14 @@ const StyledThemePage = styled.section`
       background-image: url(${require("../../images/theme/pc_title_bg.png")});
       background-repeat: no-repeat;
       background-size: 100%;
+    }
+  }
+
+  .tabs {
+    padding-top: 30%;
+
+    @media ${DEVICE.tablet} {
+      padding-top: 20%;
     }
   }
 `;
