@@ -95,26 +95,18 @@ export const themeTabsMeta = [
   {
     title: "甩尾車神戰",
     id: "theme1",
-    link: "/theme/theme1",
-    target: "_blank",
   },
   {
     title: "紳士之路",
     id: "theme2",
-    link: "/theme/theme2",
-    target: "_blank",
   },
   {
     title: "玩在藝起",
     id: "theme3",
-    link: "/theme/theme3",
-    target: "_blank",
   },
   {
     title: "演唱會",
     id: "theme4",
-    link: "/theme/theme4",
-    target: "_blank",
   },
 ];
 
@@ -122,26 +114,18 @@ export const voteTabsMeta = [
   {
     title: "人氣王展車",
     id: "voteHotCar",
-    link: "",
-    target: "",
   },
   {
     title: "競速改裝",
     id: "voteSpeedCar",
-    link: "",
-    target: "",
   },
   {
     title: "古董經典",
     id: "voteOldCar",
-    link: "",
-    target: "",
   },
   {
     title: "優雅旅行",
     id: "voteTravelCar",
-    link: "",
-    target: "",
   },
 ];
 

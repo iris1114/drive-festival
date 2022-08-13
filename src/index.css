@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 :root {
-  --font: "Roboto Slab", serif;
+  --font: "Noto Sans TC", sans-serif;
   --white-color: #fff;
   --black-color: #333333;
   --font-2xl: 28px;

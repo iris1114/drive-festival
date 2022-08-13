@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
-import Tabs from "../../components/Tabs";
 import Title from "../../components/Title";
 import VoteCard from "../../components/VoteCard";
+import VoteTabs from "../../components/VoteTabs";
 import { voteMeta, voteTabsMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
 
@@ -34,7 +34,7 @@ const VoteSection = ({ moreBtn, slice }) => {
         <Title imgSrc="home/vote/title.png" title="展車票選" />
       </div>
 
-      <Tabs meta={voteTabsMeta} onTabClick={handleTabClick} />
+      <VoteTabs meta={voteTabsMeta} onTabClick={handleTabClick} />
       <div className="votes">
         {carMeta.slice(0, slice).map((element, index) => {
           return <VoteCard meta={element} key={index} />;

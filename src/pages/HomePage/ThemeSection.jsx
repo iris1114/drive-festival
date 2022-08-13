@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Carousel from "../../components/Carousel";
-import Tabs from "../../components/Tabs";
+import ThemeTabs from "../../components/ThemeTabs";
 import Title from "../../components/Title";
 import { themeCarsMeta, themeTabsMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
@@ -9,11 +9,16 @@ import { COLOR, FONT } from "../../utils/styles";
 
 const ThemeSection = () => {
   const [index, setIndex] = useState(0);
+  const [tabId, setTabId] = useState(null);
 
   const changeIndex = (index) => {
     setIndex(index);
   };
   const meta = themeCarsMeta[index];
+
+  const handleTabClick = (id, index) => {
+    setTabId(index);
+  };
 
   return (
     <StyledThemeSection>
@@ -32,11 +37,15 @@ const ThemeSection = () => {
         <Title imgSrc="home/theme/title.png" title="四大主題活動" />
       </div>
 
-      <Tabs meta={themeTabsMeta} />
+      <ThemeTabs
+        meta={themeTabsMeta}
+        onTabClick={handleTabClick}
+        slideIndex={index}
+      />
       <div className="slider">
         <img src={require("../../images/home/theme/tv.png")} alt="tv" />
         <div className="slider__content">
-          <Carousel meta={themeCarsMeta} onActive={changeIndex} />
+          <Carousel meta={themeCarsMeta} tabId={tabId} onActive={changeIndex} />
         </div>
         <div className="slider__text pc-none">
           <div className="slider__title">{meta.title}</div>
@@ -120,9 +129,6 @@ const StyledThemeSection = styled.section`
     }
   }
 
-  .tab {
-    background-color: ${COLOR.orange};
-  }
   .slider {
     position: relative;
     margin-top: 30px;

@@ -21,11 +21,14 @@ const ExhibitionInfo = ({ meta }) => {
         </div>
         <p className="info__desc">{meta.desc}</p>
       </div>
+
       <div className="info__img">
-        <img
-          src={require(`../images/home/exhibition/${meta.img}`)}
-          alt={meta.title}
-        />
+        <Link to={`/exhibition/${meta.id}`} target={meta.target}>
+          <img
+            src={require(`../images/home/exhibition/${meta.img}`)}
+            alt={meta.title}
+          />
+        </Link>
       </div>
     </StyledExhibitionInfo>
   );

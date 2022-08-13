@@ -48,11 +48,11 @@ const StyledVoteDialog = styled.div`
     &__btn {
       background-color: ${COLOR.orange};
       color: ${COLOR.white};
-      padding: 0px 3px;
-      border-radius: 4px;
+      padding: 0px 10px;
+      border-radius: 20px;
 
       @media ${DEVICE.tablet} {
-        padding: 0px 10px;
+        padding: 5px 20px;
       }
     }
   }

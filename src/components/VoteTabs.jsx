@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
-const Tabs = ({ meta, onTabClick, newId }) => {
+const VoteTabs = ({ meta, onTabClick }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const getActiveClass = (index) => {
@@ -20,24 +19,23 @@ const Tabs = ({ meta, onTabClick, newId }) => {
   };
 
   return (
-    <StyledTabs className="tabs">
+    <StyledVoteTabs className="tabs">
       {meta.map((element, index) => {
         return (
-          <Link to={element.link} target={element.target} key={index}>
-            <div
-              className={`tab ${getActiveClass(index)}`}
-              onClick={(event) => handleClick(event, element.id, index)}
-            >
-              {element.title}
-            </div>
-          </Link>
+          <div
+            key={index}
+            className={`tab ${getActiveClass(index)}`}
+            onClick={(event) => handleClick(event, element.id, index)}
+          >
+            {element.title}
+          </div>
         );
       })}
-    </StyledTabs>
+    </StyledVoteTabs>
   );
 };
 
-const StyledTabs = styled.section`
+const StyledVoteTabs = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,14 +45,13 @@ const StyledTabs = styled.section`
   .tab {
     margin: 0 5px;
     padding: 0 5px;
-
-    border-radius: 5px;
+    border-radius: 20px;
     color: ${COLOR.white};
     cursor: pointer;
 
     @media ${DEVICE.tablet} {
       font-size: ${FONT.l};
-      padding: 10px 10px;
+      padding: 10px 13px;
       margin: 20px;
     }
 
@@ -64,4 +61,4 @@ const StyledTabs = styled.section`
   }
 `;
 
-export default Tabs;
+export default VoteTabs;

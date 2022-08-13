@@ -71,13 +71,12 @@ const StyledVoteCard = styled.div`
       .btn {
         background-color: ${COLOR.grey};
         color: ${COLOR.white};
-        padding: 5px 10px;
-        border-radius: 10px;
+        padding: 2px 10px;
+        border-radius: 20px;
 
         @media ${DEVICE.tablet} {
-          padding: 5px 15px;
           font-size: ${FONT.s};
-          border-radius: 12px;
+          padding: 5px 15px;
         }
       }
     }

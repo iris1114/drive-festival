@@ -59,10 +59,12 @@ const StyledMarketCard = styled.div`
         background-color: ${COLOR.subOrange};
         color: ${COLOR.white};
         padding: 0px 3px;
-        border-radius: 4px;
+        border-radius: 20px;
+        font-size: ${FONT.xs};
 
         @media ${DEVICE.tablet} {
           padding: 0px 10px;
+          border-radius: 20px;
         }
       }
     }

@@ -1,23 +1,29 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
+import { useEffect, useRef } from "react";
 
-const Carousel = ({ meta, onActive }) => {
+const Carousel = ({ meta, onActive, tabId }) => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (tabId !== null) {
+      swiperRef.current.swiper.slideTo(tabId);
+    }
+  }, [swiperRef, tabId]);
+
   return (
     <StyledCarousel>
       <Swiper
+        ref={swiperRef}
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Pagination, Navigation]}
         onSlideChange={(swiperCore) => {
           const { activeIndex } = swiperCore;
           onActive && onActive(activeIndex);

@@ -72,16 +72,14 @@ const StyledDriveCard = styled.div`
     .btn {
       background-color: ${COLOR.grey};
       color: ${COLOR.white};
-      padding: 5px 10px;
-      border-radius: 10px;
+      padding: 5px 15px;
+      border-radius: 20px;
       display: inline;
       font-size: ${FONT.xs};
       cursor: pointer;
 
       @media ${DEVICE.tablet} {
-        padding: 5px 15px;
         font-size: ${FONT.s};
-        border-radius: 12px;
       }
     }
   }

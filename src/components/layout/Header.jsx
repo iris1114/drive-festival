@@ -119,7 +119,7 @@ const StyledHeader = styled.header`
           &--active {
             color: ${COLOR.white};
             background-color: ${COLOR.hoverBg};
-            border-radius: 10px;
+            border-radius: 20px;
           }
         }
       }
@@ -158,7 +158,7 @@ const StyledNav = styled.nav`
         display: block;
         width: 80px;
         text-align: center;
-        padding: 5px 0px;
+        padding: 3px 5px;
         cursor: pointer;
         margin-right: 5px;
 
@@ -166,7 +166,7 @@ const StyledNav = styled.nav`
         &--active {
           color: ${COLOR.white};
           background-color: ${COLOR.hoverBg};
-          border-radius: 10px;
+          border-radius: 20px;
         }
       }
     }
