@@ -48,8 +48,12 @@ const StyledExhibitionSection = styled.section``;
 const StyledAreaSection = styled.div`
   position: relative;
   padding-bottom: 20px;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: auto;
+
+  @media ${DEVICE.tablet} {
+    top: -70px;
+  }
 
   .meta {
     width: 100%;
@@ -109,7 +113,7 @@ const StyledAreaSection = styled.div`
   }
 
   .animate1 {
-    width: 15%;
+    width: 12%;
     position: absolute;
     top: 20%;
     left: 20%;
@@ -124,15 +128,15 @@ const StyledAreaSection = styled.div`
   }
 
   .animate2 {
-    width: 15%;
+    width: 12%;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 20%;
     animation: animate2 2s linear infinite;
 
     @keyframes animate2 {
       50% {
-        top: 81%;
+        top: 74%;
       }
     }
   }

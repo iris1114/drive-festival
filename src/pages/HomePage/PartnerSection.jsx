@@ -101,6 +101,8 @@ const StyledPartnerSection = styled.section`
 
   .box {
     position: relative;
+    max-width: 800px;
+    margin: auto;
 
     &__partner {
       position: absolute;
@@ -120,7 +122,7 @@ const StyledPartnerSection = styled.section`
       margin-bottom: 40px;
 
       @media ${DEVICE.tablet} {
-        margin-bottom: 45px;
+        margin-bottom: 35px;
       }
     }
   }

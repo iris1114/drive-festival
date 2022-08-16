@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { DEVICE } from "../../utils/device";
 import { COLOR } from "../../utils/styles";
 import DriveDialog from "./DriveDialog";
+import FormDialog from "./FormDialog";
+import MarketDialog from "./MarketDialog";
 import VoteDialog from "./VoteDialog";
 
 const Dialog = ({ meta, onClose }) => {
@@ -17,6 +19,10 @@ const Dialog = ({ meta, onClose }) => {
             <VoteDialog meta={meta.meta} />
           ) : meta.category === "drive" ? (
             <DriveDialog meta={meta.meta} />
+          ) : meta.category === "market" ? (
+            <MarketDialog meta={meta.meta} />
+          ) : meta.category === "form" ? (
+            <FormDialog />
           ) : null}
         </div>
         <div className="dialog__close" onClick={handleCloseClick}>

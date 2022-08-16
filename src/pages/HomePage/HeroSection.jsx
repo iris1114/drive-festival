@@ -131,6 +131,15 @@ const StyledHeroWrap = styled.div`
 
       @media ${DEVICE.tablet} {
         padding: 0px 80px;
+        max-width: 1300px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      @media ${DEVICE.desktop} {
+        max-width: 1600px;
       }
     }
 
@@ -139,7 +148,7 @@ const StyledHeroWrap = styled.div`
       position: absolute;
 
       @media ${DEVICE.tablet} {
-        width: 16%;
+        width: 13%;
       }
 
       &-1 {
@@ -155,13 +164,13 @@ const StyledHeroWrap = styled.div`
 
         @media ${DEVICE.tablet} {
           top: 32%;
-          left: 25%;
+          left: 28%;
           animation: float1-pc 1.5s linear infinite;
 
           @keyframes float1-pc {
             50% {
               top: 31%;
-              left: 23%;
+              left: 26%;
             }
           }
         }
@@ -179,13 +188,13 @@ const StyledHeroWrap = styled.div`
         }
 
         @media ${DEVICE.tablet} {
-          top: 35%;
+          top: 33%;
           left: 48%;
           animation: float2-pc 3s linear infinite;
 
           @keyframes float2-pc {
             50% {
-              top: 36%;
+              top: 34%;
             }
           }
         }
@@ -204,13 +213,13 @@ const StyledHeroWrap = styled.div`
 
         @media ${DEVICE.tablet} {
           top: 30%;
-          right: 6%;
+          right: 10%;
           animation: float3-pc 3s linear infinite;
 
           @keyframes float3-pc {
             50% {
               top: 32%;
-              right: 8%;
+              right: 12%;
             }
           }
         }

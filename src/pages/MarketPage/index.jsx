@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import Dialog from "../../components/dialog";
 import MarketCard from "../../components/MarketCard";
 import PageBg from "../../components/PageBg";
 import PageHero from "../../components/PageHero";
 import Title from "../../components/Title";
+import DialogContext from "../../contexts/DialogContent";
 import { marketMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
 import { FONT } from "../../utils/styles";
 
 const MarketSection = () => {
+  const { dialogData, setDialogData } = useContext(DialogContext);
+
   return (
     <StyledMarketPage className="market">
       <PageHero
@@ -34,6 +39,17 @@ const MarketSection = () => {
           })}
         </div>
       </PageBg>
+      {dialogData.open && (
+        <Dialog
+          meta={dialogData}
+          onClose={() => {
+            setDialogData({
+              ...dialogData,
+              open: false,
+            });
+          }}
+        />
+      )}
     </StyledMarketPage>
   );
 };
@@ -63,12 +79,12 @@ const StyledMarketPage = styled.main`
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
-      padding: 0px 15px;
+      padding: 150px 15px 0px;
 
       @media ${DEVICE.tablet} {
-        padding-top: 300px;
+        padding: 300px 0px 0px;
       }
     }
   }

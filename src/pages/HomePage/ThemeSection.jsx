@@ -36,20 +36,25 @@ const ThemeSection = () => {
       <div className="title-img">
         <Title imgSrc="home/theme/title.png" title="四大主題活動" />
       </div>
-
-      <ThemeTabs
-        meta={themeTabsMeta}
-        onTabClick={handleTabClick}
-        slideIndex={index}
-      />
-      <div className="slider">
-        <img src={require("../../images/home/theme/tv.png")} alt="tv" />
-        <div className="slider__content">
-          <Carousel meta={themeCarsMeta} tabId={tabId} onActive={changeIndex} />
-        </div>
-        <div className="slider__text pc-none">
-          <div className="slider__title">{meta.title}</div>
-          <p className="slider__desc">{meta.desc}</p>
+      <div className="content">
+        <ThemeTabs
+          meta={themeTabsMeta}
+          onTabClick={handleTabClick}
+          slideIndex={index}
+        />
+        <div className="slider">
+          <img src={require("../../images/home/theme/tv.png")} alt="tv" />
+          <div className="slider__content">
+            <Carousel
+              meta={themeCarsMeta}
+              tabId={tabId}
+              onActive={changeIndex}
+            />
+          </div>
+          <div className="slider__text pc-none">
+            <div className="slider__title">{meta.title}</div>
+            <p className="slider__desc">{meta.desc}</p>
+          </div>
         </div>
       </div>
     </StyledThemeSection>
@@ -127,6 +132,11 @@ const StyledThemeSection = styled.section`
     @media ${DEVICE.tablet} {
       padding-top: 20%;
     }
+  }
+
+  .content {
+    max-width: 1100px;
+    margin: auto;
   }
 
   .slider {

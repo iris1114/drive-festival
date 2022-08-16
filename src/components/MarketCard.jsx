@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import DialogContext from "../contexts/DialogContent";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
 const MarketCard = ({ meta }) => {
+  const { setDialogData } = useContext(DialogContext);
+
   return (
-    <StyledMarketCard>
+    <StyledMarketCard
+      onClick={() => {
+        setDialogData({ meta: meta, open: true, category: "market" });
+      }}
+    >
       <div className="img">
         <img src={require(`../images/market/${meta.img}`)} alt={meta.title} />
       </div>

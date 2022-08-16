@@ -15,7 +15,8 @@ const StyledTitile = styled.div`
   margin-bottom: 30px;
 
   @media ${DEVICE.tablet} {
-    width: 50%;
+    width: 35%;
+    height: 48px;
   }
 `;
 

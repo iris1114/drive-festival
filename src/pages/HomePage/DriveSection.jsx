@@ -29,13 +29,15 @@ const DriveSection = ({ moreBtn, slice }) => {
         台車主同場炫車搭配音樂、特色活動、美食、特色市集。
       </p>
 
-      <div className="votes">
-        {driveMeta.slice(0, slice).map((element, index) => {
-          return <DriveCard meta={element} key={index} />;
-        })}
-      </div>
+      <div className="content">
+        <div className="votes">
+          {driveMeta.slice(0, slice).map((element, index) => {
+            return <DriveCard meta={element} key={index} />;
+          })}
+        </div>
 
-      {moreBtn && <Button link="/dive" />}
+        {moreBtn && <Button link="/dive" />}
+      </div>
 
       <img
         className="draw draw-3"
@@ -140,6 +142,12 @@ const StyledDriveSection = styled.section`
         line-height: ${FONT.xl};
         margin-bottom: 40px;
       }
+  }
+
+
+  .content{
+    max-width: 1100px;
+    margin: auto;
   }
 
   .votes{

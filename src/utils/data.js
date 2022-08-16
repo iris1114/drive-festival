@@ -414,40 +414,48 @@ export const marketMeta = [
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
   {
     img: "market1.png",
     title: "攤位名稱攤位名稱",
     no: "A00001",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugiat impedit perferendis labore ullam aliquam voluptate eius voluptatem. Explicabo, non.",
   },
 ];

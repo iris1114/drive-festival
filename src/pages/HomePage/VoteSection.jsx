@@ -34,13 +34,15 @@ const VoteSection = ({ moreBtn, slice }) => {
         <Title imgSrc="home/vote/title.png" title="展車票選" />
       </div>
 
-      <VoteTabs meta={voteTabsMeta} onTabClick={handleTabClick} />
-      <div className="votes">
-        {carMeta.slice(0, slice).map((element, index) => {
-          return <VoteCard meta={element} key={index} />;
-        })}
+      <div className="content">
+        <VoteTabs meta={voteTabsMeta} onTabClick={handleTabClick} />
+        <div className="votes">
+          {carMeta.slice(0, slice).map((element, index) => {
+            return <VoteCard meta={element} key={index} />;
+          })}
+        </div>
+        {moreBtn && <Button link="/vote" />}
       </div>
-      {moreBtn && <Button link="/vote" />}
     </StyledVoteSection>
   );
 };
@@ -116,6 +118,11 @@ const StyledVoteSection = styled.section`
         padding-top: 15%;
         padding-bottom: 2%;
       }
+  }
+
+  .content{
+    max-width: 1100px;
+    margin: auto;
   }
 
 
