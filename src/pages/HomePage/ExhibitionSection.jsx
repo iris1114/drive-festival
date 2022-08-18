@@ -96,6 +96,7 @@ const StyledAreaSection = styled.div`
 
           &__text {
             flex-direction: row-reverse;
+            padding: 0px 10px;
           }
         }
       }
@@ -103,10 +104,10 @@ const StyledAreaSection = styled.div`
       &:nth-child(3) {
         @media ${DEVICE.tablet} {
           position: relative;
-          top: 40%;
+          top: 36%;
           left: 30%;
           width: 100%;
-          transform: translate(-0%, -40%);
+          transform: translate(-0%, -36%);
         }
       }
     }

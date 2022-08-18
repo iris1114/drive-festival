@@ -58,7 +58,13 @@ const StyledExhibitionInfo = styled.div`
     }
 
     &__desc {
-      width: 90%;
+      max-width: 260px;
+      height: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
   }
 `;

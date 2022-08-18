@@ -3,6 +3,7 @@ import styled from "styled-components";
 import DialogContext from "../../contexts/DialogContent";
 import { DEVICE } from "../../utils/device";
 import { COLOR, FONT } from "../../utils/styles";
+import DialogCarousel from "../DialogCarousel";
 
 const MarketDialog = ({ meta }) => {
   const { setDialogData } = useContext(DialogContext);
@@ -10,10 +11,7 @@ const MarketDialog = ({ meta }) => {
   return (
     <StyledMarketDialog>
       <div className="dialog__img">
-        <img
-          src={require(`../../images/market/${meta.img}`)}
-          alt={meta.title}
-        />
+        <DialogCarousel meta={meta.imgs} />
       </div>
 
       <div className="dialog__text">

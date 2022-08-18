@@ -78,14 +78,10 @@ const StyledThemeDetialPage = styled.section`
       text-align: center;
 
       @media ${DEVICE.tablet} {
-        width: 60%;
+        width: 50%;
         font-size: ${FONT.m};
         line-height: ${FONT.xxl};
-        margin-bottom: 150px;
-      }
-
-      p {
-        margin-bottom: 20px;
+        padding-bottom: 100px;
       }
     }
   }

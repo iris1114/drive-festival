@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import { DEVICE } from "../../utils/device";
 import { COLOR, FONT } from "../../utils/styles";
+import DialogCarousel from "../DialogCarousel";
 
 const VoteDialog = ({ meta }) => {
   return (
     <StyledVoteDialog>
       <div className="dialog__img">
-        <img
-          src={require(`../../images/home/vote/${meta.img}`)}
-          alt={meta.title}
-        />
+        <DialogCarousel meta={meta.imgs} />
       </div>
 
       <div className="dialog__text">
@@ -28,7 +26,7 @@ const StyledVoteDialog = styled.div`
   .dialog {
     &__title {
       font-size: ${FONT.m};
-      margin-bottom: 15px;
+      margin: 15px 0px;
     }
 
     &__vote {

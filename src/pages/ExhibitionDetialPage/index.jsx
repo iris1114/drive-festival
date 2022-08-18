@@ -96,10 +96,19 @@ const StyledExhibitionDetialPage = styled.section`
   }
 
   .vote-section {
-    padding-top: 150px;
-
+    padding: 0px 0px;
+    @media ${DEVICE.tablet} {
+      padding: 0px 0px;
+    }
     .draw {
       display: none;
+    }
+
+    .title-img {
+      padding-top: 50%;
+      @media ${DEVICE.tablet} {
+        padding-top: 20%;
+      }
     }
   }
 `;

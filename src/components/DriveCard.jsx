@@ -14,10 +14,7 @@ const DriveCard = ({ meta }) => {
       }}
     >
       <div className="img">
-        <img
-          src={require(`../images/home/drive/${meta.img}`)}
-          alt={meta.title}
-        />
+        <img src={require(`../images/${meta.imgs[0]}`)} alt={meta.title} />
         <img
           className="icon"
           src={require(`../images/home/drive/icon.png`)}
