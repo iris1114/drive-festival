@@ -43,20 +43,34 @@ const Header = () => {
         </StyledLogo>
 
         <StyledNav className="nav m-none">
-          <ul className="nav__ul">
+          <div className="nav__ul">
             {menu.map((element, index) => {
               return (
-                <li key={index} onClick={closeMobileMenu}>
+                <div className="nav__li" key={index} onClick={closeMobileMenu}>
                   <Link
                     className={`nav__link ${getActiveClass(element.pathname)}`}
                     to={element.pathname}
                   >
                     {element.title}
                   </Link>
-                </li>
+
+                  <div className="nav__submenu m-none">
+                    {element.submenu.map((_element, _index) => {
+                      return (
+                        <Link
+                          className="nav__sublink"
+                          to={_element.pathname}
+                          key={_index}
+                        >
+                          {_element.name}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </StyledNav>
 
         <StyledBurger className="pc-none burger" onClick={openMobileMenu}>
@@ -141,9 +155,10 @@ const StyledHeader = styled.header`
 const StyledLogo = styled.div`
   width: 150px;
   z-index: 2;
+  padding: 25px 20px 20px;
 
   @media ${DEVICE.tablet} {
-    width: 200px;
+    width: 180px;
   }
 `;
 
@@ -152,6 +167,17 @@ const StyledNav = styled.nav`
     .nav {
       &__ul {
         display: flex;
+        position: relative;
+      }
+
+      &__li {
+        margin-right: 5px;
+
+        &:hover {
+          color: ${COLOR.white};
+          background-color: ${COLOR.hoverBg};
+          border-radius: 20px;
+        }
       }
 
       &__link {
@@ -160,13 +186,39 @@ const StyledNav = styled.nav`
         text-align: center;
         padding: 3px 5px;
         cursor: pointer;
-        margin-right: 5px;
 
-        &:hover,
         &--active {
           color: ${COLOR.white};
           background-color: ${COLOR.hoverBg};
           border-radius: 20px;
+        }
+
+        &:hover {
+          + .nav__submenu {
+            display: block;
+          }
+        }
+      }
+
+      &__submenu {
+        position: absolute;
+        margin-left: 10px;
+        background-color: hsl(0, 0%, 100%, 0.85);
+        display: none;
+
+        &:hover {
+          display: block;
+        }
+      }
+
+      &__sublink {
+        padding: 10px 20px;
+        display: block;
+        cursor: pointer;
+        color: ${COLOR.black};
+
+        &:hover {
+          color: ${COLOR.hoverBg};
         }
       }
     }

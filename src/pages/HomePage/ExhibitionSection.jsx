@@ -7,7 +7,10 @@ import { DEVICE } from "../../utils/device";
 const ExhibitionSection = () => {
   return (
     <StyledExhibitionSection>
-      <Title imgSrc="home/exhibition/title.png" title="三大活動區" />
+      <div className="title-img">
+        <Title imgSrc="home/exhibition/title.png" title="三大活動區" />
+      </div>
+
       <StyledAreaSection>
         <img
           className="pc-none"

@@ -2,26 +2,79 @@ export const menu = [
   {
     title: "首頁",
     pathname: "/",
+    submenu: [],
   },
   {
     title: "展區介紹",
     pathname: "/exhibition",
+    submenu: [
+      {
+        name: "古董經典",
+        pathname: "/exhibition/oldCar",
+      },
+      {
+        name: "競速改裝",
+        pathname: "/exhibition/speedCar",
+      },
+      {
+        name: "優雅旅行",
+        pathname: "/exhibition/travelCar",
+      },
+    ],
   },
   {
     title: "主題活動",
     pathname: "/theme",
+    submenu: [
+      {
+        name: "甩尾車神戰",
+        pathname: "/theme/theme1",
+      },
+      {
+        name: "紳士之路",
+        pathname: "theme/theme2",
+      },
+      {
+        name: "玩在藝起",
+        pathname: "theme/theme3",
+      },
+      {
+        name: "演唱會",
+        pathname: "theme/theme4",
+      },
+    ],
   },
   {
     title: "展車票選",
     pathname: "/vote",
+    submenu: [
+      {
+        name: "人氣王展車",
+        pathname: "/vote",
+      },
+      {
+        name: "競速改裝",
+        pathname: "/vote",
+      },
+      {
+        name: "古董經典",
+        pathname: "/vote",
+      },
+      {
+        name: "優雅旅行",
+        pathname: "/vote",
+      },
+    ],
   },
   {
     title: "靚車試駕",
     pathname: "/drive",
+    submenu: [],
   },
   {
     title: "特色市集",
     pathname: "/market",
+    submenu: [],
   },
 ];
 
