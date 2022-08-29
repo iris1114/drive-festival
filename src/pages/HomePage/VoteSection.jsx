@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import Title from "../../components/Title";
@@ -6,16 +6,20 @@ import VoteCard from "../../components/VoteCard";
 import VoteTabs from "../../components/VoteTabs";
 import { voteMeta, voteTabsMeta } from "../../utils/data";
 import { DEVICE } from "../../utils/device";
+import TabContext from "../../contexts/TabContext";
 
 const VoteSection = ({ moreBtn, slice }) => {
-  const [tabId, setTabId] = useState("voteHotCar");
+  const { tabData, setTabData } = useContext(TabContext);
 
   const handleTabClick = (id) => {
-    setTabId(id);
+    setTabData({
+      ...tabData,
+      id: id,
+    });
   };
 
   const carMeta = voteMeta.filter((element) => {
-    return element.category.includes(tabId);
+    return element.category.includes(tabData.id);
   });
 
   return (

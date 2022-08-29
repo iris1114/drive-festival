@@ -5,6 +5,8 @@ import { DEVICE } from "../../utils/device";
 import { COLOR } from "../../utils/styles";
 import { menu } from "../../utils/data";
 import { useState } from "react";
+import TabContext from "../../contexts/TabContext";
+import { useContext } from "react";
 
 const Header = () => {
   const location = useLocation();
@@ -30,6 +32,17 @@ const Header = () => {
   const getOpenClass = () => {
     if (isOpen) {
       return "open";
+    }
+  };
+
+  const { tabData, setTabData } = useContext(TabContext);
+
+  const handleSubmenuClick = (event, element) => {
+    if (element.id) {
+      setTabData({
+        ...tabData,
+        id: element.id,
+      });
     }
   };
 
@@ -61,6 +74,9 @@ const Header = () => {
                           className="nav__sublink"
                           to={_element.pathname}
                           key={_index}
+                          onClick={(event) =>
+                            handleSubmenuClick(event, _element)
+                          }
                         >
                           {_element.name}
                         </Link>

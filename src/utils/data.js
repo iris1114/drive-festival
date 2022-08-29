@@ -11,14 +11,17 @@ export const menu = [
       {
         name: "古董經典",
         pathname: "/exhibition/oldCar",
+        id: null,
       },
       {
         name: "競速改裝",
         pathname: "/exhibition/speedCar",
+        id: null,
       },
       {
         name: "優雅旅行",
         pathname: "/exhibition/travelCar",
+        id: null,
       },
     ],
   },
@@ -29,18 +32,22 @@ export const menu = [
       {
         name: "甩尾車神戰",
         pathname: "/theme/theme1",
+        id: null,
       },
       {
         name: "紳士之路",
         pathname: "theme/theme2",
+        id: null,
       },
       {
         name: "玩在藝起",
         pathname: "theme/theme3",
+        id: null,
       },
       {
         name: "演唱會",
         pathname: "theme/theme4",
+        id: null,
       },
     ],
   },
@@ -51,18 +58,22 @@ export const menu = [
       {
         name: "人氣王展車",
         pathname: "/vote",
+        id: "voteHotCar",
       },
       {
         name: "競速改裝",
         pathname: "/vote",
+        id: "voteSpeedCar",
       },
       {
         name: "古董經典",
         pathname: "/vote",
+        id: "voteOldCar",
       },
       {
         name: "優雅旅行",
         pathname: "/vote",
+        id: "voteTravelCar",
       },
     ],
   },

@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
+import TabContext from "../contexts/TabContext";
 import { DEVICE } from "../utils/device";
 import { COLOR, FONT } from "../utils/styles";
 
 const VoteTabs = ({ meta, onTabClick }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { tabData } = useContext(TabContext);
 
-  const getActiveClass = (index) => {
-    if (activeIndex === index) {
+  const getActiveClass = (element) => {
+    if (tabData.id === element.id) {
       return "tab--active";
     }
     return "";
@@ -15,7 +16,6 @@ const VoteTabs = ({ meta, onTabClick }) => {
 
   const handleClick = (event, id, index) => {
     onTabClick && onTabClick(id, index);
-    setActiveIndex(index);
   };
 
   return (
@@ -24,7 +24,7 @@ const VoteTabs = ({ meta, onTabClick }) => {
         return (
           <div
             key={index}
-            className={`tab ${getActiveClass(index)}`}
+            className={`tab ${getActiveClass(element)}`}
             onClick={(event) => handleClick(event, element.id, index)}
           >
             {element.title}
